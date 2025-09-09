@@ -10,7 +10,7 @@ export const HomePage = () => {
       mrp: 2000,
       gst: 360,
       duration: "9 months",
-      type:COSNTANTS?.STANDARD,
+      type: COSNTANTS?.STANDARD,
     },
     {
       cardHeader: COSNTANTS?.PREMIUM,
@@ -18,13 +18,18 @@ export const HomePage = () => {
       mrp: 4000,
       gst: 720,
       duration: "12 months",
-      type:COSNTANTS?.PREMIUM,
+      type: COSNTANTS?.PREMIUM,
     },
   ];
   return (
     <SubscriptionCardMenu>
       {cardDetails?.map((card) => {
-        return <SubscriptionCard key = {`cardType${card?.cardHeader}`} card={card}></SubscriptionCard>;
+        return (
+          <SubscriptionCard
+            key={`cardType${card?.cardHeader}`}
+            card={card}
+          ></SubscriptionCard>
+        );
       })}
     </SubscriptionCardMenu>
   );

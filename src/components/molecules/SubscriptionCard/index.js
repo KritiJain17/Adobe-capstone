@@ -15,11 +15,11 @@ export const SubscriptionCard = ({
   backgroundColorHeader = "#3B82F6",
 }) => {
   const navigate = useNavigate();
-  const handleCheckoutButton = () =>{
+  const handleCheckoutButton = () => {
     navigate(NAV_CONFIG?.NAV_CHECKOUT, {
-      state: card
+      state: card,
     });
-  }
+  };
   return (
     <SubscriptionCardContainer>
       <SubscriptionCardHeader backgroundColor={card?.cardHeaderColor}>
@@ -31,7 +31,9 @@ export const SubscriptionCard = ({
           buttonTitle="Checkout"
           margin="3rem 0 0 0 "
           padding="1rem 1.5rem"
-          handleButtonClick = {() => {handleCheckoutButton()}}
+          handleButtonClick={() => {
+            handleCheckoutButton();
+          }}
         ></Button>
       </SubscriptionCardBody>
     </SubscriptionCardContainer>
