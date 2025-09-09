@@ -15,6 +15,15 @@ function App() {
     <PageOutlet>
       <Router>
         <Routes>
+          <Route path =  "/"
+          element = {
+            <Navigate replace to = {NAV_CONFIG?.NAV_SUBSCRIPTION}/>
+          }/>
+
+           <Route
+                    path={NAV_CONFIG?.NAV_SUBSCRIPTION}
+                    element={<HomePage />}
+                  ></Route>
           <Route
             path="/*"
             element={
@@ -29,9 +38,6 @@ function App() {
             }
           ></Route>
         </Routes>
-
-        <HomePage />
-        <CheckoutPage />
       </Router>
     </PageOutlet>
   );
