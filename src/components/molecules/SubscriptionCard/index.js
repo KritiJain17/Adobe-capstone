@@ -8,7 +8,6 @@ import {
 import { COSNTANTS, NAV_CONFIG } from "../../../constants";
 import { Button } from "../Button";
 import { useNavigate } from "react-router-dom";
-import Box from "../../atoms/box.atom";
 
 export const SubscriptionCard = ({
   card = {},
