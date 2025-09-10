@@ -3,6 +3,19 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 export const ThankYouPage = () => {
+
+  useEffect(() => {
+  const triggerCheckoutView = () => {
+    if (window.adobe?.target?.triggerView) {
+      window.adobe.target.triggerView("thankyou");
+    } else {
+      setTimeout(triggerCheckoutView, 100); 
+    }
+  };
+  triggerCheckoutView();
+}, []);
+
+
   const location = useLocation();
 let card = location?.state;
 console.log(card);
