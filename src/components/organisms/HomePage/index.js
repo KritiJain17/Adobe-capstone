@@ -6,17 +6,6 @@ import { useEffect } from "react";
 
 export const HomePage = () => {
 
-  useEffect(() => {
-  const triggerCheckoutView = () => {
-    if (window.adobe?.target?.triggerView) {
-      window.adobe.target.triggerView("subscription");
-    } else {
-      setTimeout(triggerCheckoutView, 100); // retry after 100ms
-    }
-  };
-  triggerCheckoutView();
-}, []);
-
   let cardDetails = [
     {
       cardHeader: COSNTANTS?.STANDARD,
