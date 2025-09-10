@@ -10,8 +10,10 @@ import { HomePage } from "./components/organisms/HomePage";
 import { CheckoutPage } from "./components/organisms/CheckoutPage";
 import { NAV_CONFIG } from "./constants";
 import { ThankYouPage } from "./components/organisms/ThankYouPage";
+import useTriggerView from "./useTriggerView";
 
 function App() {
+useTriggerView();
   return (
     <PageOutlet>
       <Router>
