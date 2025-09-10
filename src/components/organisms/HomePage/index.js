@@ -6,10 +6,15 @@ import { useEffect } from "react";
 
 export const HomePage = () => {
 
-useEffect(() => {
-  if (window.adobe && window.adobe.target) {
-    window.adobe.target.triggerView("subscription");
-  }
+  useEffect(() => {
+  const triggerCheckoutView = () => {
+    if (window.adobe?.target?.triggerView) {
+      window.adobe.target.triggerView("subscription");
+    } else {
+      setTimeout(triggerCheckoutView, 100); // retry after 100ms
+    }
+  };
+  triggerCheckoutView();
 }, []);
 
   let cardDetails = [
