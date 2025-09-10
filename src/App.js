@@ -11,12 +11,14 @@ import { CheckoutPage } from "./components/organisms/CheckoutPage";
 import { NAV_CONFIG } from "./constants";
 import { ThankYouPage } from "./components/organisms/ThankYouPage";
 import useTriggerView from "./useTriggerView";
+import TargetViewTracker from "./TargetViewTracker";
 
 function App() {
-useTriggerView();
+
   return (
     <PageOutlet>
       <Router>
+    <TargetViewTracker />
         <Routes>
           <Route
             path="/"
