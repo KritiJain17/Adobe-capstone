@@ -8,6 +8,7 @@ import {
 import { COSNTANTS, NAV_CONFIG } from "../../../constants";
 import { Button } from "../Button";
 import { useNavigate } from "react-router-dom";
+import Box from "../../atoms/box.atom";
 
 export const SubscriptionCard = ({
   card = {},
@@ -26,7 +27,9 @@ export const SubscriptionCard = ({
         {card?.cardHeader}
       </SubscriptionCardHeader>
       <SubscriptionCardBody>
-        {`Get yours for Rs. ${card?.mrp}`}
+        <Box>
+          {`Get yours for Rs. ${card?.mrp}`}
+        </Box>
         <Button
           buttonTitle="Checkout"
           margin="3rem 0 0 0 "
