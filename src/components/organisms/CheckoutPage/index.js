@@ -13,16 +13,6 @@ import { NAV_CONFIG } from "../../../constants";
 import { useEffect } from "react";
 
 export const CheckoutPage = () => {
-useEffect(() => {
-  const triggerCheckoutView = () => {
-    if (window.adobe?.target?.triggerView) {
-      window.adobe.target.triggerView("checkout");
-    } else {
-      setTimeout(triggerCheckoutView, 100); // retry after 100ms
-    }
-  };
-  triggerCheckoutView();
-}, []);
 
   const navigate = useNavigate();
   const location = useLocation();
