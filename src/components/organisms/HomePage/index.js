@@ -2,7 +2,16 @@ import React from "react";
 import { SubscriptionCard } from "../../molecules/SubscriptionCard";
 import { COSNTANTS } from "../../../constants";
 import { SubscriptionCardMenu } from "./styles";
+import { useEffect } from "react";
+
 export const HomePage = () => {
+
+useEffect(() => {
+  if (window.adobe && window.adobe.target) {
+    window.adobe.target.triggerView("subscription");
+  }
+}, []);
+
   let cardDetails = [
     {
       cardHeader: COSNTANTS?.STANDARD,
