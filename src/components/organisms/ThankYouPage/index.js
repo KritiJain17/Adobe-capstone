@@ -16,7 +16,7 @@ console.log(card);
         success: function (offers) {
           window.adobe.target.applyOffer({
             mbox: "kj-mbox",
-            selector: "#kjtarget",
+            selector: "#kjtargetapstone",
             offer: offers,
           });
         },
