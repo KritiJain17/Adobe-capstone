@@ -10,8 +10,14 @@ import {
 import { Button } from "../../molecules/Button";
 import { useLocation, useNavigate } from "react-router-dom";
 import { NAV_CONFIG } from "../../../constants";
+import { useEffect } from "react";
 
 export const CheckoutPage = () => {
+useEffect(() => {
+  if (window.adobe && window.adobe.target) {
+    window.adobe.target.triggerView("checkout");
+  }
+}, []);
   const navigate = useNavigate();
   const location = useLocation();
   let card = location?.state;
