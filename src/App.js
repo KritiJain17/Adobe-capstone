@@ -12,11 +12,13 @@ import { NAV_CONFIG } from "./constants";
 import { ThankYouPage } from "./components/organisms/ThankYouPage";
 import useTriggerView from "./useTriggerView";
 import TargetViewTracker from "./TargetViewTracker";
+import Box from "./components/atoms/box.atom";
 
 function App() {
 
   return (
     <PageOutlet>
+    <Box id = "pageHeader">Default header</Box>
       <Router>
     <TargetViewTracker />
         <Routes>
